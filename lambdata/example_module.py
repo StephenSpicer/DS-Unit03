@@ -15,4 +15,4 @@ ODI_runs = {'name': ['Tendulkar', 'Sangakkara', 'Ponting',
 
 ODIdf = pd.DataFrame(ODI_runs)
 
-ODIdf.iloc[,1] = np.NaN
+# ODIdf.iloc[,1] = np.NaN
