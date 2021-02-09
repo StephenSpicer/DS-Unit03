@@ -24,7 +24,7 @@ def null_count(df):
 
   # Function for dropping high-cardinality columns. 
   # high_card
-  def high_card(df):
+def high_card(df):
         drop_cols = [col for col in df.select_dtypes('object').columns
                if df[col].nunique() > 100]
         df.drop(columns=drop_cols, inplace=True)
