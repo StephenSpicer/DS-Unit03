@@ -9,9 +9,9 @@ def null_count(df):
 
 
 # a function to randomize a dataframe
-def randomize(df):
-     randomizer = np.random.shuffle(DataFrame.values)
-    return randomizer 
+# def randomize(df):
+ #   randomizer = np.random.shuffle(DataFrame.values)
+ #   return randomizer 
 
 # train test split function 
 #def train_test_split(df, frac):
@@ -26,6 +26,9 @@ def train_test_split(df, frac):
     train = df[:frac]
     test = df[frac:]
     return train, test
+
+
+
 
 
 
