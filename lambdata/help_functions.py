@@ -29,3 +29,5 @@ def null_count(df):
                if df[col].nunique() > 100]
   df.drop(columns=drop_cols, inplace=True)
   return df
+
+# going to submit this with 2 functioning functions to see if it works. 
