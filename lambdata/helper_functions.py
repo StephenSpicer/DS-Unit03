@@ -4,8 +4,8 @@ import typing_extensions
 
 
 def null_count(df):
-    null_count = df.isnull().sum()
-    return null_count
+    return df.isnull().sum().sum()
+
 
 
 # a function to randomize a dataframe
@@ -14,18 +14,18 @@ def randomize(df):
     return randomizer 
 
 # train test split function 
-def train_test_split(df, seed):
-    train = df.sample(frac=0.8, random_state=42)
-    test = df.drop(train.index)
-    return
+#def train_test_split(df, frac):
+ #   train = df.sample(frac=0.8, random_state=42)
+  #  test = df.drop(train.index)
+   # return
 
 # more train test function stuff
 
-#def train_test_split_2(df, seed):
- #   mask = np.random.rand(len(df)) < 0.8
-  #  train = df[mask]
-   # test = df[~mask]
-    #return train, test
+def train_test_split(df, frac):
+    frac = round(len(df)*frac)
+    train = df[:frac]
+    test = df[frac:]
+    return train, test
 
 
 
