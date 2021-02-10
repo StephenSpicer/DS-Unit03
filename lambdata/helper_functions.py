@@ -1,47 +1,41 @@
-#a function to return a null count
 
-#import typing_extensions
+import pandas as pd
+import numpy as np
 
+class SLDataFrame:
+    def __init__(self, df): #constructor defining the dataframe ****
+        self.df = df
 
-def null_count(df):
-    return df.isnull().sum().sum()
+    # nicks code for number of total cells (really simple)
+    def num_cells(self):
+        return self.shape[0] * self.shape[1]  # total data points
 
+    # my code for null_count return (should be an int by default)
+    def null_count(self):
+        return self.df.isnull().sum().sum()
 
+    # total count of unique 
+    def count_unique(self):
+        return self.df.isunique().sum()
 
-# a function to randomize a dataframe
-# def randomize(df):
- #   randomizer = np.random.shuffle(DataFrame.values)
- #   return randomizer 
+    # total count of unique in a specific column
+    def unique_count(self, col_name):
+        return self.df[col_name].isunique().sum()
 
-# train test split function 
-#def train_test_split(df, frac):
- #   train = df.sample(frac=0.8, random_state=42)
-  #  test = df.drop(train.index)
-   # return
+    # percentage of unique in a particular column
+    def unique_percentage(self, col_name):
+        return self.unique_count(col_name) / len(self.df) * 100
 
-# more train test function stuff
+    # for dropping high cardinality columns
+    def high_card_drop(self):
+        for col in self.df.columns:
+            if self.unique_percentage(col) > 50:
+                self.df.drop(columns=col, inplace=True)
 
-def train_test_split(df, frac):
-    frac = round(len(df)*frac)
-    train = df[:frac]
-    test = df[frac:]
-    return train, test
+    # Train test split on dataframe : 
 
-
-
-
-
-
-
-#   # Drop features with lots of NaN values
-#  df.dropna(axis=1, thresh=len(df)*0.8, inplace=True)
-
-  # Function for dropping high-cardinality columns. 
-  # high_card
-#def high_card(df):
-       # drop_cols = [col for col in df.select_dtypes('object').columns
-        #       if df[col].nunique() > 100]
-        #df.drop(columns=drop_cols, inplace=True)
-       # return df
-
-# going to submit this with 2 functioning functions to see if it works. 
+    # def train_test_split(self, frac):
+    #     frac = round(len(self.df)*frac)
+    # train = self.df[:frac]
+    # test = self.df[frac:]
+    #     return train, test
