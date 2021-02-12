@@ -5,6 +5,8 @@
 from numpy.core.fromnumeric import prod
 from product import Product 
 from acme_report import generate_products
+from acme_report import inventory_report
+
 
 class AcmeCorp:
     # defining the constructor function:
@@ -16,7 +18,8 @@ class AcmeCorp:
         prod = Product(name, price, weight, flammability)
         return prod
 
-    # this for loop should populate the acme store i think    
+    # this for loop should populate the acme store i think
+    # Looking back, this wasn't really needed, now I just have two lists of products. That's ok.     
     def load_acme_prods(self, num_items = []):
         list_of_products = []
         for item in num_items:
@@ -41,17 +44,30 @@ ac = AcmeCorp()
 num_items = [
     ['A Cool Toy', 10, 20, 0.5],
     ['calculator', 50, 0.5, 1],
-    ['beanbag', 65, 25, 35],
-    ['popsicle sticks', 1, 0.5, 6],
+    ['beanbag', 65, 25, 2],
+    ['popsicle sticks', 1, 0.5, 1.2],
     ['hammer', 30, 6, 0],
-    ['gold iphone', 900, 2, 15],
+    ['gold iphone', 900, 2, 2],
     ['candy', 1, 0.1, 0],
-    ['fertilizer', 35, 45, 650],
-    ['expensive matches', 100, 0.1, 100]]
+    ['fertilizer', 35, 45, 2.3],
+    ['expensive matches', 100, 0.1, 2.5]]
 
 ac.load_acme_prods(num_items)
 
-ac.check_explodability()
-ac.check_stealability()
+# ac.check_explodability()
+# ac.check_stealability()
+
+
 gen_list = generate_products()
-print(gen_list)
+
+for object in gen_list:
+    print(object.name)
+    print(object.price)
+    print(object.weight)
+    print(object.flammability)
+    print(" ____ ")
+
+print(len(gen_list))
+
+# ir = inventory_report(gen_list)
+# print(ir)

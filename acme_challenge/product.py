@@ -2,13 +2,14 @@
 from random import randint
 
 class Product:
+#constructor with the defaults
     def __init__(self, name, price=10, weight=20, flammability=0.5):
-        self.name = name
-        self.price = price
-        self.weight = weight
-        self.flammability = flammability
+        self.name = str(name)
+        self.price = int(price)
+        self.weight = int(weight)
+        self.flammability = float(flammability)
         self.identifier = randint(1000000, 9999999)
-
+#stealability
     def stealability(self):
         """ this method checks for stealability """
         theftness = (self.price / self.weight) 
@@ -18,7 +19,7 @@ class Product:
             return "Not so stealable..."
         else :
             return "Very stealable! Probably already stolen..."
-              
+#explode              
     def explode(self):
         """ this method checks for explodability """
         boomness = (self.flammability * self.weight) 
@@ -38,6 +39,8 @@ class BoxingGlove(Product):
         self.weight = weight
         self.flammability = flammability
         self.identifier = randint(1000000, 9999999)
+    
+    
     # second explode method:
     def explode(self):
         """ this method used to check for explodability """
