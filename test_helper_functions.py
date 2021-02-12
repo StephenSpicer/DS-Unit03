@@ -21,7 +21,12 @@ def test_num_cells():
     assert isinstance(df_count, int)
 
 # Not working right now! 
-# def test_unique_count():
-#     df_colunique = sl.unique_count(df, 'survived')
-#     assert isinstance(df_colunique, int)
-#     assert df_colunique.dtype() == np.int64 or int
+def test_unique_count():
+    df_colunique = sl.unique_count(df, 'survived')
+    assert isinstance(df_colunique, int)
+    assert df_colunique.dtype() == np.int64 or int
+
+def test_perc_unique():
+    # assert that % of unique values in a column is equal that same value.
+    df_uniqperc = sl.unique_percentage(df, 'survived')
+    assert(df_uniqperc > 0) and (df_uniqperc < 100)

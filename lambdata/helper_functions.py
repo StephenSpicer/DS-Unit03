@@ -5,8 +5,8 @@ import numpy as np
 
 class SLDataFrame(pd.DataFrame):
 #class SLDataFrame():
-    #def __init__(self, df): #constructor defining the dataframe ****
-        #self = self.df
+    def __init__(self, df): #constructor defining the dataframe ****
+        self.df = df
 
     # nicks code for number of total cells (really simple)
     def num_cells(self):
@@ -22,14 +22,17 @@ class SLDataFrame(pd.DataFrame):
 
 
     # Not working right now!
-    # # total count of unique in a specific column
-    # def unique_count(self, col_name):
-    #     col_name = pd.DataFrame[col_name]
-    #     return self.col_name.isunique().sum()
+    # total count of unique in a specific column
+    def unique_count(self, col_name):
+        # import pdb; pdb.set_trace()
+        col_name = self.df.DataFrame[col_name]
+        return self.col_name.nunique().sum()
 
     # percentage of unique in a particular column
     def unique_percentage(self, col_name):
-        return self.unique_count(col_name) / len(self) * 100
+        #import pdb; pdb.set_trace()
+        col_name = self.df.DataFrame[col_name]
+        return self.unique_count / len(self) * 100
 
     # for dropping high cardinality columns
     def high_card_drop(self):
