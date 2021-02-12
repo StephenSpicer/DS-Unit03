@@ -260,9 +260,15 @@ career here, you'll have to answer the following:
 - What, in your opinion, is an important part of code reviews? That is, what is
   something you pay attention to when you review code, and that you appreciate
   when others do the same for your code?
+
+  --- I find it very useful when our coders here at acme corp have been considerate in their docstrings and in their comments. Obviously this makes the QA cycle much easier, knowing what their classes and methods do, why they are built that way etc. I also find it useful when they are considerate with their variable names, for example finding the balance between appropriate abbreviation and still making contextual sense, as well as seperating words with _ for example. Keeping track of what goes in the readme, versions of different pyfiles, etc is all a lot easier when docstrings and comments are used considerately, and of course when pep8 conventions are observed. 
+
 - We have an awful lot of computers here, and it gets pretty confusing with
   slightly different things running on all of them. How could containers help us
   improve this situation?
+
+  -- We could use dockers (and of course containers) to reduce the number of virtual machines needed here at acme corp. Dockers would allow us to set up semi-permanent systems that adopted and shared the rules of common operating systems, whichever was most suited to our goal. Common examples are unix / linus distributions like ubuntu, apache, red hat and docker tools that correspond to common cloud services like AWS and Azure. Containers would allow us a safe environment in which to "move fast and break things" (to borrow a phrase I heard once) without risking other company assets that might already be running or even just stored on our supercomputers. Containers come in many flavors, but generally speaking require less resources than multiple virtual machines, making them perfect for testing especially in the collaborative sense. 
+
 
 Answer both of these questions (baseline ~5 sentences) here in text.
 

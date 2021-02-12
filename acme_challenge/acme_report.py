@@ -29,13 +29,15 @@ NOUNS = [
     'Tractor',
     'Radiator']
 
-# should generate a given number of products (default
+# should generate a given number of products (default 30 here)
 def generate_products(num_products=30):
     gen_products = []
     for product in range(num_products):
         gen_products.append(Product(ADJECTIVES[randint(0,10)]
         + " " + NOUNS[randint(0,10)], randint(5, 100), randint(5, 100), uniform(0.0, 2.5)))
     return gen_products
+    
+
 
 
 #our list will change every time but that won't matter. 
