@@ -2,7 +2,8 @@
 import pandas as pd
 import numpy as np
 
-class SLDataFrame:
+# class SLDataFrame(pd.DataFrame):
+class SLDataFrame():
     def __init__(self, df): #constructor defining the dataframe ****
         self.df = df
 

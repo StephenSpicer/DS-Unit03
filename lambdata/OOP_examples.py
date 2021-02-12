@@ -32,8 +32,9 @@ class Complex:
 class SocialMediaUser:
     def __init__(self, name, location, upvotes=0):
         self.name = str(name)
-        self.location = location
+        self.location = str(location)
         self.upvotes = int(upvotes)
+
     def recieve_upvotes(self, num_upvotes=1):
         self.upvotes += num_upvotes
         
@@ -54,6 +55,9 @@ class SocialMediaUser:
     # num2 = Complex(2, 6) # num2.r == 2 and num2.i == 6
     # num1.add(num2)
     # print(num1.r, num1.i)
+
+
+
     # user1 = SocialMediaUser(name="Carl", location="united states")
     # user2 = SocialMediaUser(name="Carlton", location='costa rica')
     # user3 = SocialMediaUser(name="carlos", location='argentina', upvotes=12242)
