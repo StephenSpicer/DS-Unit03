@@ -45,6 +45,12 @@ def test_explode():
 
 def test_default_num_products():
     #fun fact, this test detected a bug!!!
-    """ tests the default number of products, should be thirty"""
+    """
+    tests the default number of products, should be thirty
+    make sure however generate products is going that 
+    THAT SPECIFIC OUTPUT len is being checked. 
+    """
     prods = generate_products()
     assert len(prods) == 30
+
+# man, oh, man, those tests. that was really something. 
