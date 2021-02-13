@@ -2,18 +2,21 @@
 # DS23 02/12/2021
 from random import randint
 
+
 class AcmeCorp:
     # defining the constructor function:
     def __init__(self):
-        self.products = []
-        
+        self.products = []      
     # this should create products eventually
+    
     def create_product(self, name, price=10, weight=20, flammability=0.5):
         prod = Product(name, price, weight, flammability)
         return prod
 
     # this for loop should populate the acme store i think
     # Looking back, this wasn't really needed, now I just have two lists of products. That's ok.     
+    
+    
     def load_acme_prods(self, num_items = []):
         list_of_products = []
         for item in num_items:
@@ -22,11 +25,14 @@ class AcmeCorp:
         return list_of_products
 
     # checking both of those last methods
+    
+    
     def check_stealability(self):
         if self.products:
             for product in self.products:
                 print(product.stealability())
-
+    
+    
     def check_explodability(self):
         if self.products:
             for product in self.products:
@@ -50,7 +56,8 @@ class Product:
         elif theftness < 0.5 :
             return "Not so stealable..."
         else :
-            return "Very stealable! Probably already stolen..."
+            return "Very stealable!"
+            
     #explode              
     def explode(self):
         """ this method checks for explodability """

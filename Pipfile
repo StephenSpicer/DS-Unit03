@@ -8,6 +8,7 @@ numpy = "*"
 pandas = "*"
 pytest = "*"
 pydataset = "*"
+autopep8 = "*"
 
 [dev-packages]
 
