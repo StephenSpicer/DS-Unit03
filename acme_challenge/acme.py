@@ -1,8 +1,6 @@
 
 # DS23 02/12/2021
 
-
-from numpy.core.fromnumeric import prod
 from acme_report import generate_products
 from acme_report import inventory_report
 from random import randint
@@ -93,21 +91,21 @@ class BoxingGlove(Product):
             return "OUCH!"     
 
 
-ac = AcmeCorp()
+#ac = AcmeCorp()
 
 # here we go with raw data to feed our new class
-num_items = [
-    ['A Cool Toy', 10, 20, 0.5],
-    ['calculator', 50, 0.5, 1],
-    ['beanbag', 65, 25, 2],
-    ['popsicle sticks', 1, 0.5, 1.2],
-    ['hammer', 30, 6, 0],
-    ['gold iphone', 900, 2, 2],
-    ['candy', 1, 0.1, 0],
-    ['fertilizer', 35, 45, 2.3],
-    ['expensive matches', 100, 0.1, 2.5]]
+# num_items = [
+#     ['A Cool Toy', 10, 20, 0.5],
+#     ['calculator', 50, 0.5, 1],
+#     ['beanbag', 65, 25, 2],
+#     ['popsicle sticks', 1, 0.5, 1.2],
+#     ['hammer', 30, 6, 0],
+#     ['gold iphone', 900, 2, 2],
+#     ['candy', 1, 0.1, 0],
+#     ['fertilizer', 35, 45, 2.3],
+#     ['expensive matches', 100, 0.1, 2.5]]
 
-ac.load_acme_prods(num_items)
+# ac.load_acme_prods(num_items)
 
 # ac.check_explodability()
 # ac.check_stealability()
