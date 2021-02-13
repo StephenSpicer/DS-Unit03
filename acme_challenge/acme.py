@@ -1,4 +1,3 @@
-
 # DS23 02/12/2021
 from random import randint
 
@@ -13,23 +12,19 @@ class AcmeCorp:
         prod = Product(name, price, weight, flammability)
         return prod
 
-
-    def load_acme_prods(self, num_items = []):
+    def load_acme_prods(self, num_items=[]):
         list_of_products = []
         for item in num_items:
             list_of_products.append(self.create_product(item))
         self.products = list_of_products
         return list_of_products
-
     # checking both of those last methods
-    
-    
+
     def check_stealability(self):
         if self.products:
             for product in self.products:
                 print(product.stealability())
-    
-    
+
     def check_explodability(self):
         if self.products:
             for product in self.products:
@@ -37,7 +32,7 @@ class AcmeCorp:
 
 
 class Product:
-    #constructor with the defaults
+    # constructor with the defaults
     def __init__(self, name, price=10, weight=20, flammability=0.5):
         self.name = str(name)
         self.price = int(price)
