@@ -1,8 +1,7 @@
 #!/usr/bin/env python
-
 import pytest
 from acme import Product
-from acme_report import generate_products, inventory_report
+from acme_report import generate_products
 
 #@pytest.fixture
 # decorator concepts - pin DONT FORGET

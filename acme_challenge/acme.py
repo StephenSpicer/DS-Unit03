@@ -1,8 +1,5 @@
 
 # DS23 02/12/2021
-
-from acme_report import generate_products
-from acme_report import inventory_report
 from random import randint
 
 class AcmeCorp:
@@ -24,7 +21,7 @@ class AcmeCorp:
         self.products = list_of_products
         return list_of_products
 
-# checking both of those last methods
+    # checking both of those last methods
     def check_stealability(self):
         if self.products:
             for product in self.products:
@@ -44,7 +41,7 @@ class Product:
         self.weight = int(weight)
         self.flammability = float(flammability)
         self.identifier = randint(1000000, 9999999)
-#stealability
+    #stealability
     def stealability(self):
         """ this method checks for stealability """
         theftness = (self.price / self.weight) 
@@ -54,7 +51,7 @@ class Product:
             return "Not so stealable..."
         else :
             return "Very stealable! Probably already stolen..."
-#explode              
+    #explode              
     def explode(self):
         """ this method checks for explodability """
         boomness = (self.flammability * self.weight) 
@@ -66,7 +63,7 @@ class Product:
             return "...BABOOM!!"     
 
 
-# subclass of Product - 'Boxing Glove"
+    # subclass of Product - 'Boxing Glove"
 class BoxingGlove(Product):
     def __init__(self, name, price=10, weight=10, flammability=0.5):
         self.name = name
