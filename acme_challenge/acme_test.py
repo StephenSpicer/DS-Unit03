@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 
 import pytest
-# import acme
-# import product
 from acme import Product
 from acme_report import generate_products, inventory_report
 

@@ -114,16 +114,16 @@ ac.load_acme_prods(num_items)
 
 
 #to check that our generate_products() function is working... 
-gen_list = generate_products()
+# gen_list = generate_products()
 
-for object in gen_list:
-    print(object.name)
-    print(object.price)
-    print(object.weight)
-    print(object.flammability)
-    print(" ____ ")
+# for object in gen_list:
+#     print(object.name)
+#     print(object.price)
+#     print(object.weight)
+#     print(object.flammability)
+#     print(" ____ ")
 
-print(len(gen_list))
+# print(len(gen_list))
 
 # to check that our inventory_report() function is working. 
 
