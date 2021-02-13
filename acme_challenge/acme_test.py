@@ -3,7 +3,7 @@
 import pytest
 # import acme
 # import product
-from product import Product
+from acme import Product
 from acme_report import generate_products, inventory_report
 
 #@pytest.fixture

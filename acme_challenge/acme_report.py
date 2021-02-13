@@ -2,7 +2,7 @@
 # !/usr/bin/env python
 
 from random import randint, sample, uniform
-from product import Product
+from acme import Product
 
 ADJECTIVES = [
     'Awesome',
