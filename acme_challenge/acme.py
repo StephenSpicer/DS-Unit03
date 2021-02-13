@@ -6,9 +6,9 @@ from random import randint
 class AcmeCorp:
     # defining the constructor function:
     def __init__(self):
-        self.products = []      
-    # this should create products eventually
-    
+        self.products = []     
+    # this should create products eventually   
+
     def create_product(self, name, price=10, weight=20, flammability=0.5):
         prod = Product(name, price, weight, flammability)
         return prod
@@ -57,7 +57,7 @@ class Product:
             return "Not so stealable..."
         else :
             return "Very stealable!"
-            
+
     #explode              
     def explode(self):
         """ this method checks for explodability """

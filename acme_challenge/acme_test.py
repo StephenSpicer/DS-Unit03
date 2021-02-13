@@ -25,8 +25,8 @@ def test_default_product_weight():
 
 def test_stealability():
     """" Test new product having stealability"""
-    prod = Product('Test Product', 1000, 2, 1.5)
-    assert prod.stealability() == "Very stealable! Probably already stolen..."
+    prod = Product('Test Product', 100, 2, 1.5)
+    assert prod.stealability() == "Very stealable!"
     # this should be high stealability
     prod = Product('Test Product', 3, 5, 1.5)
     assert prod.stealability() == "Kinda stealable..."
