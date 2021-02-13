@@ -6,17 +6,14 @@ from random import randint
 class AcmeCorp:
     # defining the constructor function:
     def __init__(self):
-        self.products = []     
-    # this should create products eventually   
+        self.products = []
+    # this should create products eventually
 
     def create_product(self, name, price=10, weight=20, flammability=0.5):
         prod = Product(name, price, weight, flammability)
         return prod
 
-    # this for loop should populate the acme store i think
-    # Looking back, this wasn't really needed, now I just have two lists of products. That's ok.     
-    
-    
+
     def load_acme_prods(self, num_items = []):
         list_of_products = []
         for item in num_items:
